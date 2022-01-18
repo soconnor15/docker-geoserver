@@ -1,0 +1,10 @@
+  #geoserver webapp available at localhost:8080/gesoerver
+  geoapi:
+    build:
+      context: ./geoserver
+      dockerfile: Dockerfile.dev
+    image: sw2-geoserv
+    ports:
+      - 8080:8080
+    volumes:
+     - ./geoserver:/app
